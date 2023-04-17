@@ -556,7 +556,7 @@ picomatch@^2.0.4, picomatch@^2.2.1:
 
 prisma@^4.12.0:
   version "4.12.0"
-  resolved "https://registry.npmjs.org/prisma/-/prisma-4.12.0.tgz"
+  resolved "https://registry.yarnpkg.com/prisma/-/prisma-4.12.0.tgz#1080eda951928cb3b0274ad29da9ae4f93143d68"
   integrity sha512-xqVper4mbwl32BWzLpdznHAYvYDWQQWK2tBfXjdUD397XaveRyAP7SkBZ6kFlIg8kKayF4hvuaVtYwXd9BodAg==
   dependencies:
     "@prisma/engines" "4.12.0"

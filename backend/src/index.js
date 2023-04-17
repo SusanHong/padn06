@@ -6,12 +6,17 @@ import { fileURLToPath } from "url";
 import { prisma } from "./adapters";
 import rootRouter from "./routes";
 import { csrfErrorHandler, doubleCsrfProtection } from "./csrf";
+import { prisma } from "./adapters";
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const frontendDir = path.join(__dirname, "../../frontend/dist");
 
 const port = process.env.PORT || 8000;
 
 const app = express();
+
+process.on("exit", async () => { await prisma.$disconnect();
+});
 
 app.use(express.static(frontendDir));
 
