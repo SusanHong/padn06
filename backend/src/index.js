@@ -6,7 +6,6 @@ import { fileURLToPath } from "url";
 import { prisma } from "./adapters";
 import rootRouter from "./routes";
 import { csrfErrorHandler, doubleCsrfProtection } from "./csrf";
-import { prisma } from "./adapters";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const frontendDir = path.join(__dirname, "../../frontend/dist");
