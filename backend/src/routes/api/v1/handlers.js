@@ -11,3 +11,7 @@ export async function getCsrfToken(req, res) {
   req.session.init = true;
   res.json({ csrfToken });
 }
+export async function createOneUser(req, res) {
+  const user = await prisma.user.create({ data: { name: req.body.name } });
+  return res.status(201).json(user);
+}
